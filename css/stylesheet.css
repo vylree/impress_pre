@@ -1,32 +1,3 @@
-/*
-    So you like the style of impress.js demo?
-    Or maybe you are just curious how it was done?
-
-    You couldn't find a better place to find out!
-
-    Welcome to the stylesheet impress.js demo presentation.
-
-    Please remember that it is not meant to be a part of impress.js and is
-    not required by impress.js.
-    I expect that anyone creating a presentation for impress.js would create
-    their own set of styles.
-
-    But feel free to read through it and learn how to get the most of what
-    impress.js provides.
-
-    And let me be your guide.
-
-    Shall we begin?
-*/
-
-
-/*
-    We start with a good ol' reset.
-    That's the one by Eric Meyer http://meyerweb.com/eric/tools/css/reset/
-
-    You can probably argue if it is needed here, or not, but for sure it
-    doesn't do any harm and gives us a fresh start.
-*/
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -49,7 +20,7 @@ time, mark, audio, video {
     vertical-align: baseline;
 }
 
-/* HTML5 display-role reset for older browsers */
+
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
     display: block;
@@ -69,18 +40,7 @@ q:before, q:after {
     content: none;
 }
 
-/*table {
-    border-collapse: collapse;
-    border-spacing: 0;
-}
 
-/*
-    Now here is when interesting things start to appear.
-
-    We set up <body> styles with default font and nice gradient in the background.
-    And yes, there is a lot of repetition there because of -prefixes but we don't
-    want to leave anybody behind.
-*/
 .t{
     margin-top: 10px;
 }
@@ -99,15 +59,10 @@ body {
     background:         radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
 }
 
-/*
-    Now let's bring some text styles back ...
-*/
 b, strong { font-weight: bold }
 i, em { font-style: italic }
 
-/*
-    ... and give links a nice look.
-*/
+
 a {
     color: inherit;
     text-decoration: none;
@@ -129,22 +84,6 @@ a:focus {
     text-shadow: -1px -1px 2px rgba(100,100,100,0.5);
 }
 
-/*
-    Because the main point behind the impress.js demo is to demo impress.js
-    we display a fallback message for users with browsers that don't support
-    all the features required by it.
-
-    All of the content will be still fully accessible for them, but I want
-    them to know that they are missing something - that's what the demo is
-    about, isn't it?
-
-    And then we hide the message, when support is detected in the browser.
-*/
-/*
-    Now let's style the presentation steps.
-
-    We start with basics to make sure it displays correctly in everywhere ...
-*/
 
 .step {
     position: relative;
@@ -242,60 +181,8 @@ a:focus {
     font-size: 32px;
 }
 
-/*
-    Second step is nothing special, just a text with a link, so it doesn't need
-    any special styling.
 
-    Let's move to 'big thoughts' with centered text and custom font sizes.
-*/
-#big {
-    width: 600px;
-    text-align: center;
-    font-size: 60px;
-    line-height: 1;
-}
 
-#big b {
-    display: block;
-    font-size: 250px;
-    line-height: 250px;
-}
-
-#big .thoughts {
-    font-size: 90px;
-    line-height: 150px;
-}
-
-/*
-    'Tiny ideas' just need some tiny styling.
-*/
-#tiny {
-    width: 500px;
-    text-align: center;
-}
-
-/*
-    This step has some animated text ...
-*/
-#ing { width: 500px }
-
-/*
-    ... so we define display to `inline-block` to enable transforms and
-    transition duration to 0.5s ...
-*/
-#ing b {
-    display: inline-block;
-    -webkit-transition: 0.5s;
-    -moz-transition:    0.5s;
-    -ms-transition:     0.5s;
-    -o-transition:      0.5s;
-    transition:         0.5s;
-}
-
-/*
-    ... and we want 'positioning` word to move up a bit when the step gets
-    `present` class ...
-*/
 #ing.present .positioning {
     -webkit-transform: translateY(-10px);
     -moz-transform:    translateY(-10px);
@@ -304,9 +191,7 @@ a:focus {
     transform:         translateY(-10px);
 }
 
-/*
-    ... 'rotating' to rotate a quarter of a second later ...
-*/
+
 #ing.present .rotating {
     -webkit-transform: rotate(-10deg);
     -moz-transform:    rotate(-10deg);
@@ -321,9 +206,6 @@ a:focus {
     transition-delay:         0.25s;
 }
 
-/*
-    ... and 'scaling' to scale down after another quarter of a second.
-*/
 #ing.present .scaling {
     -webkit-transform: scale(0.7);
     -moz-transform:    scale(0.7);
@@ -347,19 +229,6 @@ a:focus {
     font-size: 78px;
 }
 
-#source {
-    width: 700px;
-    padding-bottom: 300px;
-
-    /* Yoda Icon :: Pixel Art from Star Wars http://www.pixeljoint.com/pixelart/1423.htm */
-    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARgAAAEYCAMAAACwUBm+AAAAAXNSR0IArs4c6QAAAKtQTFRFsAAAvbWSLUUrLEQqY1s8UYJMqJ1vNTEgOiIdIzYhjIFVLhsXZ6lgSEIsP2U8JhcCVzMsSXZEgXdOO145XJdWOl03LzAYMk4vSXNExr+hwcuxRTs1Qmk+RW9Am49eFRANQz4pUoNMQWc+OSMDTz0wLBsCNVMxa2NBOyUDUoNNSnlEWo9VRGxAVzYFl6tXCggHbLNmMUIcHhwTXkk5f3VNRT8wUT8xAAAACQocRBWFFwAAAAF0Uk5TAEDm2GYAAAPCSURBVHja7d3JctNAFIZRMwRCCGEmzPM8z/D+T8bu/ptbXXJFdij5fMt2Wuo+2UgqxVmtttq5WVotLzBgwIABAwYMGDCn0qVqbo69psPqVpWx+1XG5iaavF8wYMCAAQMGDBgwi4DJ6Y6qkxB1HNlcN3a92gbR5P2CAQMGDBgwYMCAWSxMlrU+UY5yu2l9okfV4bAxUVbf7TJnAwMGDBgwYMCAAbMLMHeqbGR82Zy+VR1Ht81nVca6R+UdTLaU24Ruzd3qM/e4yjnAgAEDBgwYMGDA7AJMd1l/3NRdVGcj3eX/2WEhCmDGxnM7yqygu8XIPjJj8iN/MGDAgAEDBgwYMAuDGb8q0RGlLCHLv1t9qDKWn3vdNHVuEI6HPaxO9Jo3GDBgwIABAwYMmIXBdC9ShGgMk+XnkXUeuGcsP/e1+lhNnZsL/G5Vs3OAAQMGDBgwYMCAWSxMR3SzOmraG5atdy9wZKzb+vg16qyqe2FltbnAgAEDBgwYMGDALAxmTJSuN3WA76rnVca6GTnemGN1WoEBAwYMGDBgwIBZGMxUomy4+xO899V4LAg5Xnc2MGDAgAEDBgwYMGA218Wq+2K1LDqvY9xZu8zN8fICdM6btYABAwYMGDBgwIABMzfH0+pGU5afze2tXebmeAfVz+p8BQYMGDBgwIABAwbMPBzZ+oWmfJrln1273FhkbHzee9WWbw7AgAEDBgwYMGDALAKm43hcdctKgblcPamOhuXnXlY5Xs6bsW4FGyQCAwYMGDBgwIABswiYMceZKgvMo+h8mrHLTdn676rj+FEFoTtHd8MwOxEYMGDAgAEDBgyYRcBM5UhXqiymW3R3c9ARhWO/OmjqfjVZy+xEYMCAAQMGDBgwYBYG073OnCV0RFNhMhaOa9WfKmOB6XjHMN1tQmaAAQMGDBgwYMCA2VWY7vXjz1U4croAzgPztwIDBgwYMGDAgAEDZhswh035NBw59Dww3RgYMGDAgAEDBgwYMJuD6f4tXT7NUqfCdBvZLkxXdgQGDBgwYMCAAQNmt2DGj8WzwAfV/w7T/aq7mxwwYMCAAQMGDBgwuwqTOo7uTwTngflSzQ3TdaJvAwEDBgwYMGDAgAED5gSvgbyo5oHZ4Pc+gwEDBgwYMGDAgAEzhOm+5G0qTGaAAQMGDBgwYMCAAXNaMOcnls3tNwWm+zRzp54NDBgwYMCAAQMGDJh5YNL36k1TLuGvVq+qnKMbS5n7tulT9asCAwYMGDBgwIABA2ZumKuztLnjgQEDBgwYMGDAgNl5mH/4/ltKA6vBNAAAAABJRU5ErkJggg==);
-    background-position: bottom right;
-    background-repeat: no-repeat;
-}
-
-#source q {
-    font-size: 60px;
-}
 
 #garbage_list p {
     -webkit-transform-style: preserve-3d;
@@ -402,6 +271,22 @@ a:focus {
     transform:         translateZ(20px);
 }
 
+#question .one {
+    -webkit-transform: translateZ(-40px);
+    -moz-transform:    translateZ(-40px);
+    -ms-transform:     translateZ(-40px);
+    -o-transform:      translateZ(-40px);
+    transform:         translateZ(-40px);
+}
+
+#question .two {
+    -webkit-transform: translateZ(20px);
+    -moz-transform:    translateZ(20px);
+    -ms-transform:     translateZ(20px);
+    -o-transform:      translateZ(20px);
+    transform:         translateZ(20px);
+}
+
 #garbage_list .the {
     -webkit-transform: translateZ(-40px);
     -moz-transform:    translateZ(-40px);
@@ -426,15 +311,6 @@ a:focus {
     transform:         translateZ(-10px);
 }
 
-#garbage_list .footnote {
-    font-size: 32px;
-
-    -webkit-transform: translateZ(-10px);
-    -moz-transform:    translateZ(-10px);
-    -ms-transform:     translateZ(-10px);
-    -o-transform:      translateZ(-10px);
-    transform:         translateZ(-10px);
-}
 
 #garbage_list.present span,
 #garbage_list.present b {
